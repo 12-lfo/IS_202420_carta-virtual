@@ -7,68 +7,17 @@ Carta
 {% endblock %}
 {% block content %}
 <div class="row flex-row g-3">
+{% for producto in productos %}
     <div class="col-12 col-mg-6 col-lg-4">
     <div class="card" style="width: 18rem;">
-        <img src="https://www.carniceriademadrid.es/wp-content/uploads/2022/09/smash-burger-que-es.jpg" class="card-img-top" alt="...">
+        <img src={{producto.img}} class="card-img-top" alt="...">
         <div class="card-body">
-        <h5 class="card-title">Hamburguesa clasica</h5>
-        <p class="card-text">
-            <ul>
-                <li>Carne de ternera picada IGP Sierra de Guadarrama</li>
-                <li>Pan brioche</li>
-                <li>Queso cheddar</li>
-                <li>Cebolla frita crujiente</li>
-                <li>Tomate en rodajas</li>
-                <li>Pepinillos agridulces</li>
-                <li>Lechuga</li>
-                <li>Salsas a elección</li>
-            </ul>        
-        </p>
+        <h5 class="card-title">{{producto.name}}</h5>
+        <p class="card-text">{{producto.description}}</p>
         <a href="#" class="btn btn-primary">Ordenar</a>
         </div>
     </div>
     </div>
-    <div class="col-12 col-mg-6 col-lg-4">
-        <div class="card" style="width: 18rem;">
-            <img src="https://www.carniceriademadrid.es/wp-content/uploads/2022/09/smash-burger-que-es.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-            <h5 class="card-title">Hamburguesa clasica</h5>
-            <p class="card-text">
-                <ul>
-                    <li>Carne de ternera picada IGP Sierra de Guadarrama</li>
-                    <li>Pan brioche</li>
-                    <li>Queso cheddar</li>
-                    <li>Cebolla frita crujiente</li>
-                    <li>Tomate en rodajas</li>
-                    <li>Pepinillos agridulces</li>
-                    <li>Lechuga</li>
-                    <li>Salsas a elección</li>
-                </ul>        
-            </p>
-            <a href="#" class="btn btn-primary">Ordenar</a>
-            </div>
-        </div>
-        </div>
-        <div class="col-12 col-mg-6 col-lg-4">
-            <div class="card" style="width: 18rem;">
-                <img src="https://www.carniceriademadrid.es/wp-content/uploads/2022/09/smash-burger-que-es.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">Hamburguesa clasica</h5>
-                <p class="card-text">
-                    <ul>
-                        <li>Carne de ternera picada IGP Sierra de Guadarrama</li>
-                        <li>Pan brioche</li>
-                        <li>Queso cheddar</li>
-                        <li>Cebolla frita crujiente</li>
-                        <li>Tomate en rodajas</li>
-                        <li>Pepinillos agridulces</li>
-                        <li>Lechuga</li>
-                        <li>Salsas a elección</li>
-                    </ul>        
-                </p>
-                <a href="#" class="btn btn-primary">Ordenar</a>
-                </div>
-            </div>
-            </div>
+    {% endfor %}
 </div>
 {% endblock %}
